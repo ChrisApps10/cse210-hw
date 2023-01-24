@@ -17,7 +17,7 @@ public class Journal
 
         DateTime theCurrentTime = DateTime.Now;
         string dateText = theCurrentTime.ToShortDateString();
-        questionEntry = dateText + " " + _Questions[index] + " " + questionEntry + "\n";  
-        File.AppendAllText(@"C:cse210_hw\prove\Develop02\Journal.txt", questionEntry); 
+        questionEntry = dateText + theCurrentTime + " " + _Questions[index] + " " + questionEntry + "\n";  
+        File.AppendAllText(@"C:Journal.txt", questionEntry); 
     }    
 }
