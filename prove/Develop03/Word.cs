@@ -4,8 +4,8 @@ class Word
 {
    public string separateWords(string scriptureString)
    {
-    string str1 = scriptureString;
-    List<string> result = str1?.Split(' ').ToList();
+    string st1 = scriptureString;
+    List<string> result = st1?.Split(' ').ToList();
     var random = new Random();
     int index = random.Next(result.Count);
     string randomWord = result[index];

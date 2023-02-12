@@ -4,26 +4,21 @@ class ScriptureReference
 {
    private string _book = "2 Nephi";
    private string _chapterNumber = "31";
-   private string _beginVerseNumber =  "21";
+   private string _verseNumber =  "21";
 
-   public ScriptureReference(string _startVerse)
-   {
-        
-   }
-   public ScriptureReference(string _startVerse, string _endVerse)
+   public ScriptureReference(string _verseNumber)
    {
 
    }
-   private string _finishVerseNumber;
    public string inputReference()
    {
-    if (_beginVerseNumber != null && _finishVerseNumber != null)
+    if (_verseNumber != null)
     {
-        string reference = $"{_book} {_chapterNumber}: {_beginVerseNumber}-{_finishVerseNumber}";
+        string reference = $"{_book} {_chapterNumber}:{_verseNumber}";
         return reference;
     } else
     {
-        string reference = $"{_book} {_chapterNumber}:{_finishVerseNumber}";
+        string reference = $"{_book} {_chapterNumber}:{_verseNumber}";
         return reference;
     }
    }

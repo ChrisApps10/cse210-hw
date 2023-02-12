@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+
         Scripture scripture = new Scripture();
         scripture.Display();
         string input = "";
-        
+
         
 
         while (input != "quit")
