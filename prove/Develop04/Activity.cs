@@ -2,11 +2,11 @@ using System;
 
 class Activity
 {
-    // attributes /////////////////////////////////////////////////
+    //attributes//
    protected int _duration;
    protected string _wellDone = "Well done!";
 
-   // constructors /////////////////////////////////////////////////
+   //constructors//
    public Activity()
    {
       _duration = 20;
@@ -16,8 +16,7 @@ class Activity
       _duration = duration;
    }
 
-   
-    // methods /////////////////////////////////////////////////
+    // methods //
     public void runActivity(int choice)
     {
         if (choice == 1)
@@ -42,7 +41,7 @@ class Activity
     Console.WriteLine("How long, in seconds, would you like for your session? ");
     string response = Console.ReadLine();
     int duration = int.Parse(response);
-    _duration = duration * 100;
+    _duration = duration * 50;
    }
 
    public int getDuration()

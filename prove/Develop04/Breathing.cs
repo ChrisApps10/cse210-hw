@@ -48,7 +48,7 @@ class Breathing : Activity
         Console.Clear();
         for (int i = (_duration/100) / 5; i > 0; i--)
         {
-            Console.WriteLine("Breathe in");
+            Console.WriteLine("Breathe in...");
             for (int j = 5; j > 0; j--)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -59,7 +59,7 @@ class Breathing : Activity
                 Console.ForegroundColor = ConsoleColor.White;
             }
             Console.Clear();
-            Console.WriteLine("Breathe out");
+            Console.WriteLine("Now breathe out...");
             for (int k = 5; k > 0; k--)
             {
                 Console.ForegroundColor = ConsoleColor.Green;

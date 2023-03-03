@@ -5,10 +5,10 @@ class Program
      static void Main(string[] args)
     {
     
-        string response = "";
+        string entry = "";
         
 
-        while (response != "4")
+        while (entry != "4")
         {
             Console.WriteLine();
             Console.WriteLine("1. Start breathing activity");
@@ -16,35 +16,33 @@ class Program
             Console.WriteLine("3. Start listing activity");
             Console.WriteLine("4. Quit");
             Console.Write("Select a choice from the menu: ");
-            string userResponse = Console.ReadLine();
-            response = userResponse;
-            int userInput = int.Parse(response);
+            string userEntry = Console.ReadLine();
+            entry = userEntry;
+            int input = int.Parse(entry);
             Console.Clear();
             Activity activity = new Activity();
 
-            if (userInput == 1)
+            if (input == 1)
             {
                 Activity activity1 = new Activity();
-                activity1.runActivity(userInput);
+                activity1.runActivity(input);
             }
-            if (userInput == 2)
+            if (input == 2)
             {
                 Activity activity2 = new Activity();
-                activity2.runActivity(userInput);
+                activity2.runActivity(input);
             }
-            if (userInput == 3)
+            if (input == 3)
             {
                 Activity activity3 = new Activity();
-                activity3.runActivity(userInput);
+                activity3.runActivity(input);
             }
-
-        }
-        {
-            Console.WriteLine("Thank you for participating.");
-            Console.WriteLine("");
-        }
-        
-        
-        
+            else
+            {
+                Console.WriteLine("Thank you for participating.");
+                Console.WriteLine("");
+                Environment.Exit(0);
+            }
+    }
     }
 }

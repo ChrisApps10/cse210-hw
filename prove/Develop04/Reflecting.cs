@@ -85,24 +85,10 @@ class Reflecting : Activity
                 Console.Clear();
 
             }
-        }
-
-
-
-
-        
-        
-        Thread.Sleep(2000);
+        }  
+        Thread.Sleep(3000);
         
     }
-
-
-
    public void displayPrompt()
-   {
-
-   }
-    
-
-  
+   {}
 }
