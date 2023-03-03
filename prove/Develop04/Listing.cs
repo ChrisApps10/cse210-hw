@@ -2,42 +2,42 @@ using System;
 
 class Listing : Activity
 {
-    // attributes /////////////////////////////////////////////////
+    //attributes
    private string _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-   private string _startMessage = "Welcome to the Listing Activity";
-   private string _endMessage = "";
-   private string _considerPromptMessage = "Consider the following prompt:";
+   private string _startingMessage = "Welcome to the Listing Activity";
+   private string _finishingMessage = "";
+   private string _considerPrompt = "Consider the following prompt:";
    private List<string> _promptList = new List<string>{"Who are people that you appreciate?", 
         "What are personal strengths of yours?", "Who are people that you have helped this week?", 
         "When have you felt the Holy Ghost this month?", "Who are some of your personal heroes?"};
-   private string _name = "Listing Activity";
+   private string _title = "Listing Activity";
    private int _numberOfListItems;
 
-   // constructors /////////////////////////////////////////////////
-   public Listing(int duration) : base(duration)
+   //constructors
+   public Listing(int timeDuration) : base(timeDuration)
    {
       _numberOfListItems = 0;
-      _duration = duration;
+      _timeDuration = timeDuration;
       
    }
 
    
-    // methods /////////////////////////////////////////////////
+    //methods
    public void runListingActivity(int duration)
    {
-        Console.WriteLine(_startMessage);
+        Console.WriteLine(_startingMessage);
         Console.WriteLine("");
         Console.WriteLine(_description);
         Console.WriteLine("");
         Activity activity = new Activity();
-        activity.setDuration();
-        _duration = activity.getDuration();
+        activity.setTimeDuration();
+        _timeDuration = activity.getTimeDuration();
         Console.WriteLine("");
         listing();
         Console.WriteLine(_wellDone);
         Console.WriteLine("");
-        _endMessage = $"You finished {_duration / 100} seconds of listing.";
-        Console.WriteLine(_endMessage);
+        _finishingMessage = $"You finished {_timeDuration / 100} seconds of listing.";
+        Console.WriteLine(_finishingMessage);
         Thread.Sleep(6000);
         Console.Clear();
     
@@ -47,7 +47,7 @@ class Listing : Activity
    {
         Thread.Sleep(1000);
         Console.Clear();
-        Console.WriteLine(_considerPromptMessage);
+        Console.WriteLine(_considerPrompt);
         Console.WriteLine("");
         var random = new Random();
         int index = random.Next(_promptList.Count);
@@ -71,7 +71,7 @@ class Listing : Activity
         Console.WriteLine("");
         Console.Write(">");
         DateTime startTime1 = DateTime.Now;
-        DateTime endTime1 = startTime1.AddSeconds(_duration / 100);
+        DateTime endTime1 = startTime1.AddSeconds(_timeDuration / 100);
         while (DateTime.Now < endTime1)
         {
             string userInput = Console.ReadLine();
@@ -86,8 +86,8 @@ class Listing : Activity
         displayNumberOfListItems();
         Console.WriteLine("");
 
-        
-        
+
+
    }
    public void displayNumberOfListItems()
    {

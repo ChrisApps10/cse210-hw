@@ -3,25 +3,25 @@ using System;
 class Breathing : Activity
 {
     private string _description = "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.";
-    private string _startMessage = "Welcome to the Breathing Activity";
-    private string _endMessage = "";
-    private string _name = "Breathing Activity";
-    private int _duration;
-    public Breathing(int duration) : base(duration)
+    private string _startingMessage = "Welcome to the Breathing Activity";
+    private string _finishingMessage = "";
+    private string _title = "Breathing Activity";
+    private int _timeDuration;
+    public Breathing(int timeDuration) : base(timeDuration)
     {
-        _duration = duration;
+        _timeDuration = timeDuration;
 
     }
 
-    public void runBreathingActivity(int duration)
+    public void runBreathingActivity(int timeDuration)
     {
-        Console.WriteLine(_startMessage);
+        Console.WriteLine(_startingMessage);
         Console.WriteLine("");
         Console.WriteLine(_description);
         Console.WriteLine("");
         Activity activity = new Activity();
-        activity.setDuration();
-        _duration = activity.getDuration();
+        activity.setTimeDuration();
+        _timeDuration = activity.getTimeDuration();
         DateTime currentTime = DateTime.Now;
         DateTime futureTime = currentTime.AddSeconds(5);
 
@@ -37,8 +37,8 @@ class Breathing : Activity
             breathing();
             Console.WriteLine(_wellDone);
             Console.WriteLine("");
-            _endMessage = $"You finished {_duration / 100} seconds of breathing.";
-            Console.WriteLine(_endMessage);
+            _finishingMessage = $"You finished {_timeDuration / 100} seconds of breathing.";
+            Console.WriteLine(_finishingMessage);
             Thread.Sleep(5000);
         }
     }
@@ -46,7 +46,7 @@ class Breathing : Activity
     public void breathing()
     {
         Console.Clear();
-        for (int i = (_duration/100) / 5; i > 0; i--)
+        for (int i = (_timeDuration/100) / 5; i > 0; i--)
         {
             Console.WriteLine("Breathe in...");
             for (int j = 5; j > 0; j--)
@@ -54,7 +54,7 @@ class Breathing : Activity
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("\b \b");
                 Console.Write(j);
-                Thread.Sleep(1000);
+                Thread.Sleep(900);
                 Console.Write("\b \b");
                 Console.ForegroundColor = ConsoleColor.White;
             }
@@ -62,10 +62,10 @@ class Breathing : Activity
             Console.WriteLine("Now breathe out...");
             for (int k = 5; k > 0; k--)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("\b \b");
                 Console.Write(k);
-                Thread.Sleep(1000);
+                Thread.Sleep(900);
                 Console.Write("\b \b");
                 Console.ForegroundColor = ConsoleColor.White;
             }

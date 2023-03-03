@@ -11,6 +11,7 @@ class Program
         while (entry != "4")
         {
             Console.WriteLine();
+            Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Start breathing activity");
             Console.WriteLine("2. Start reflecting activity");
             Console.WriteLine("3. Start listing activity");
@@ -39,7 +40,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Thank you for participating.");
+                Console.WriteLine("Thank you for your participation!");
                 Console.WriteLine("");
                 Environment.Exit(0);
             }
