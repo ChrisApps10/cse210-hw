@@ -36,7 +36,7 @@ class Reflecting : Activity
         _timeDuration = activity.getTimeDuration();
         Console.WriteLine("");
         reflecting();
-        Console.WriteLine(_wellDone);
+        Console.WriteLine(_congratsMessage);
         Console.WriteLine("");
         _finishingMessage = $"You finished {_timeDuration / 100} seconds of reflecting.";
         Console.WriteLine(_finishingMessage);

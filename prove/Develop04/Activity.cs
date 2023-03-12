@@ -4,7 +4,7 @@ class Activity
 {
     //attributes
    protected int _timeDuration;
-   protected string _wellDone = "Well done!";
+   protected string _congratsMessage = "Well done!";
 
    //constructors
    public Activity()

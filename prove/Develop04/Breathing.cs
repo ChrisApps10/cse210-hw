@@ -35,7 +35,7 @@ class Breathing : Activity
                 Thread.Sleep(1000);
             }
             breathing();
-            Console.WriteLine(_wellDone);
+            Console.WriteLine(_congratsMessage);
             Console.WriteLine("");
             _finishingMessage = $"You finished {_timeDuration / 100} seconds of breathing.";
             Console.WriteLine(_finishingMessage);

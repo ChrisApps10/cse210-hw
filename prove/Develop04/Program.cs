@@ -4,10 +4,10 @@ class Program
 {
      static void Main(string[] args)
     {
-    
+
         string entry = "";
         
-
+        
         while (entry != "4")
         {
             Console.WriteLine();
