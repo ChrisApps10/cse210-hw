@@ -6,8 +6,10 @@ class Program
     {
         Item item1 = new Item("123", "Grapes", 2, 3);
         Item item2 = new Item("321", "Bananas", 7, 4);
+        
         Address address1 = new Address("1234 Main Street Columbus, OH USA 654321", true);
         address1.setUSA(true);
+
         Customer customer1 = new Customer("Bob Smith");
         customer1.setAddress(address1);
         Order order1 = new Order();
