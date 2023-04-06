@@ -2,9 +2,9 @@ using System;
 
 class Item
 {
-    private string _itemID = "";
-    private string _itemName = "";
-    private int _itemPrice = 0;
+    private string _productID = "";
+    private string _productName = "";
+    private int _productPrice = 0;
     private int _totalPrice = 0;
     private int _quantity = 0;
 
@@ -13,19 +13,19 @@ class Item
 
     }
 
-    public Item(string ID, string itemName, int itemPrice, int quantity)
+    public Item(string ID, string productName, int productPrice, int quantity)
     {
-        _itemID = ID;
-        _itemName = itemName;
+        _productID = ID;
+        _productName = productName;
         _quantity = quantity;
-        _itemPrice = itemPrice;
-        _totalPrice = itemPrice * quantity;
+        _productPrice = productPrice;
+        _totalPrice = productPrice * quantity;
     }
 
     public void DisplayItem()
     {
-        Console.WriteLine($"Item: {_itemName}");
-        Console.WriteLine($"Item Price: ${_itemPrice}");
+        Console.WriteLine($"Item: {_productName}");
+        Console.WriteLine($"Item Price: ${_productPrice}");
         Console.WriteLine($"Quantity: {_quantity}");
         Console.WriteLine($"Subtotal: ${_totalPrice}");
         

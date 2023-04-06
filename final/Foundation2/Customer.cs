@@ -4,12 +4,9 @@ class Customer
 {
     private string _customerName = "";
     Address _customerAddress;
-    
-    
 
     public Customer()
     {
-
     }
 
     public Customer(string customerName)
@@ -23,13 +20,12 @@ class Customer
         _customerAddress = address;
     }
 
-
     public string GetAddress()
     {
         return _customerAddress.GetAddress();
     }
     
-    public string GetCustName()
+    public string GetCustomerName()
     {
         return _customerName;
     }
@@ -39,5 +35,4 @@ class Customer
         return _customerAddress.GetUSA();
     }
 
-    
 }

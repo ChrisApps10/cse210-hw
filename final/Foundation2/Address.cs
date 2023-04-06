@@ -3,17 +3,17 @@ using System;
 class Address
 {
     string _address = "";
-    private bool _isUSA;
+    private bool _inUSA;
 
     public Address()
     {
 
     }
 
-    public Address(string address, bool isUSA)
+    public Address(string address, bool inUSA)
     {
         _address = address;
-        _isUSA = isUSA;
+        _inUSA = inUSA;
     }
 
     public string GetAddress()
@@ -28,14 +28,14 @@ class Address
         _address = userResp;
     }
 
-    public void SetUSA(bool isUSA)
+    public void SetUSA(bool inUSA)
     {
-        _isUSA = isUSA;
+        _inUSA = inUSA;
     }
 
     public bool GetUSA()
     {
-        return _isUSA;
+        return _inUSA;
 
     }
 }

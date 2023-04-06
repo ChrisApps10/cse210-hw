@@ -56,7 +56,7 @@ class Order
 
     public void DisplayPackingSlip()
     {
-        Console.WriteLine($"Customer Name: {Customer.GetCustName()}");
+        Console.WriteLine($"Customer Name: {Customer.GetCustomerName()}");
         Console.WriteLine("Packing Label");
         Console.WriteLine("");
         foreach (Item item in _items)
