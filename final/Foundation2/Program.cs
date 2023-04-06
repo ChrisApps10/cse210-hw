@@ -4,42 +4,46 @@ class Program
 {
     static void Main(string[] args)
     {
-        Item item1 = new Item("123", "Grapes", 2, 3);
-        Item item2 = new Item("321", "Bananas", 7, 4);
-        
-        Address address1 = new Address("1234 Main Street Columbus, OH USA 654321", true);
-        address1.setUSA(true);
+        Item item1 = new Item("1", "Salad", 3, 5);
+        Item item2 = new Item("1", "Hershey Chocolate Bar", 2, 1);
 
-        Customer customer1 = new Customer("Bob Smith");
-        customer1.setAddress(address1);
+        Address address1 = new Address("3828 Piermont Dr, NM 87111, USA", true);
+        address1.SetUSA(true);
+
+        Customer customer1 = new Customer("Steve Gomez");
+        customer1.SetAddress(address1);
+
         Order order1 = new Order();
-        order1.addItem(item1);
-        order1.addItem(item2);
-        order1.setCustomer(customer1);
-        Console.WriteLine("");
-        Console.WriteLine("/////////////////////////////////////////////////////////////////////////");
-        order1.displayPackingSlip();
-        order1.calculateCost();
-        Console.WriteLine("");
-        order1.displayShippingLabel();
-        Console.WriteLine("/////////////////////////////////////////////////////////////////////////");
-        Console.WriteLine("");
+        order1.AddItem(item1);
+        order1.AddItem(item2);
+        order1.SetCustomer(customer1);
 
+        Console.WriteLine("");
+        Console.WriteLine("-------------------------------------------------------------------------");
 
+        order1.DisplayPackingSlip();
+        order1.CalculateCost();
 
+        Console.WriteLine("");
+        Console.WriteLine("");
+        order1.DisplayShippingLabel();
+        Console.WriteLine("-------------------------------------------------------------------------");
+        Console.WriteLine("");
+        
         Item item3 = new Item("483974", "Milk", 4, 5);
         Item item4 = new Item("321", "Bread", 2, 4);
         Address address2 = new Address("1234 Candido Pujato Santa Fe, Santa Fe Argentina 123456", false);
-        address2.setUSA(false);
-        Customer customer2 = new Customer("Jane Smith");
-        customer2.setAddress(address2);
-        Order order2 = new Order();
-        order2.addItem(item3);
-        order2.addItem(item4);
-        order2.setCustomer(customer2);
-        order2.displayPackingSlip();
-        order2.calculateCost();
+        address2.SetUSA(false);
+        Customer customer2 = new Customer(" ");
+        customer2.SetAddress(address2);
         Console.WriteLine("");
-        order2.displayShippingLabel();
+        Order order2 = new Order();
+        order2.AddItem(item3);
+        order2.AddItem(item4);
+        order2.SetCustomer(customer2);
+        order2.DisplayPackingSlip();
+        order2.CalculateCost();
+        Console.WriteLine("");
+        order2.DisplayShippingLabel();
     }
 }
